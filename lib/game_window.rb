@@ -4,7 +4,7 @@ WIDTH  = 800
 HEIGHT = 600
 TITLE  = "Game"
 
-class Game < Gosu::Window
+class GameWindow < Gosu::Window
   def initialize
     super WIDTH, HEIGHT
     self.caption = TITLE
