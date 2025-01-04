@@ -17,6 +17,10 @@ class GameWindow < Gosu::Window
   end
 
   def button_down id
-    InputManager.new.button_down id
+    Game.input_manager.button_down id
+  end
+
+  def receive_input input
+      close if input == Gosu::KB_ESCAPE
   end
 end
