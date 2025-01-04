@@ -10,12 +10,15 @@ class Game < Gosu::Window
     self.caption = TITLE
   end
 
+  def caption
+    TITLE
+  end
+
   def update
   end
 
   def draw
   end
-
 end
 
 # Game.new.show
