@@ -18,7 +18,18 @@ describe GameWindow do
       expect(@game_window.height).to eq 600
     end
   end
-  
+
+  describe ".button_down" do
+    before do
+      @game_window = GameWindow.new
+    end
+    it "closes the window down when Escape is pressed" do
+      escape_key = Gosu::KB_ESCAPE
+      expect_any_instance_of(GameWindow).to receive(:close)
+      @game_window.button_down(escape_key)
+    end
+  end
+
   describe ".caption" do
     it "returns caption of 'Game'" do
       game_window = GameWindow.new

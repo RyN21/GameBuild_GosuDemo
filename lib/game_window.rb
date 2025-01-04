@@ -10,14 +10,14 @@ class GameWindow < Gosu::Window
     self.caption = TITLE
   end
 
-  def caption
-    TITLE
-  end
-
   def update
   end
 
   def draw
+  end
+
+  def button_down id
+    close if id == Gosu::KB_ESCAPE
   end
 end
 
