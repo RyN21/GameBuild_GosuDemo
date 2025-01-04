@@ -8,7 +8,7 @@ describe Game do
       expect(game.game_window).to be_an_instance_of GameWindow
     end
     it "has a input_manager" do
-      expect(game.input_manager).to eq InputManager
+      expect(game.input_manager).to be_an_instance_of InputManager
     end
   end
   describe ".start" do
